@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(toad_utils)
 
 find_package(catkin REQUIRED COMPONENTS
+  roslaunch
   geometry_msgs
   roscpp
   tf
@@ -27,3 +28,4 @@ add_executable(rotate src/rotate.cpp)
 target_link_libraries(rotate ${catkin_LIBRARIES})
 
 roslint_cpp()
+#roslaunch_add_file_check(launch)
